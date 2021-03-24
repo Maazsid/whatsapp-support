@@ -1,0 +1,23 @@
+@import 'variables';
+@import "mixins";
+
+.section-1 {
+  grid-area: chat-inbox;
+  @include container-border;
+}
+.section-2 {
+  grid-area: chat-window;
+  @include container-border;
+}
+.section-3 {
+  grid-area: conversation-details;
+  @include container-border;
+}
+
+.chat-container {
+  display: grid;
+  grid-template-columns: minmax(300px,auto);
+  grid-template-rows: auto;
+  grid-template-areas: "chat-inbox chat-inbox chat-window chat-window chat-window conversation-details";
+  height: 100%;
+}

@@ -1,0 +1,123 @@
+@import "variables";
+@import "mixins";
+
+.chat-window {
+  height: 100%;
+  &__header-container {
+    padding: 0.8rem 1.2rem;
+    @include flexboxContainer(row, space-around, center);
+    border-bottom: 1px solid $color-medium-tint;
+    height: 8%;
+  }
+  &__header {
+    flex-grow: 1;
+    @include flexboxContainer(column, flex-start, flex-start);
+  }
+  &__header-text {
+    @include containerHeader;
+    padding-bottom: 4px;
+  }
+  &__header-input {
+    border: none;
+    font-size: 13px;
+    color: $color-medium;
+    width: 130px;
+    outline: none;
+    &:hover {
+      border-bottom: 1px dashed $color-medium-tint;
+    }
+    &:focus {
+      border-bottom: 1px dashed $color-medium-tint;
+    }
+  }
+
+  &__header-options-icon {
+    padding: 6px 10px;
+    border-radius: 0.4rem;
+    &:hover {
+      background-color: $color-medium-shade;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+  &__header-user-icon-container {
+    @include flexboxContainer(row, flex-start, center);
+    padding: 6px 10px;
+    border-radius: 0.4rem;
+    color: $color-medium;
+    &:hover {
+      background-color: $color-medium-shade;
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+  &__header-user-icon {
+    height: 20px;
+    width: 20px;
+  }
+  &__header-user-name {
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 4px;
+  }
+
+  &__box {
+    height: 72%;
+    position: relative;
+    @include flexboxContainer(column,flex-start,flex-start);
+    background-image : url('../../../assets/images/email-pattern.png');
+    opacity: 0.8;
+    overflow-y: scroll;
+  }
+  &__message{
+    padding : 1rem;
+    @include flexboxContainer(row,flex-start,center);
+
+  }
+  &__message-profile-pic-wrapper{
+    width : 35px;
+    height : 35px;
+  }
+  &__message-profile-pic{
+    width : 35px;
+    height : 35px;
+  }
+  &__message-text{
+    direction: ltr;
+    background-color : $color-light-shade;
+    padding: 14px;
+    margin-left : 1rem;
+    max-width : 70%;
+    min-width: fit-content;
+    border-radius: 0.4rem;
+  }
+
+  &__send-message-wrapper{
+    height: 20%;
+    padding : 1rem;
+  }
+
+  &__send-message-area{
+    height: 100%;
+    background-color: $secondary-color-tint;
+    border : 1px solid $color-medium-shade;
+    border-radius: 0.4rem;
+  }
+  &__send-message-tab{
+    @include flexboxContainer(row,flex-start,center)
+  }
+  &__send-message-tab-text{
+    color : $primary-color;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top : 0.8rem;
+    margin-left : 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid $primary-color;
+    width: fit-content;
+    &:hover{
+      color : $primary-color;
+      cursor: pointer;
+    }
+  }
+}

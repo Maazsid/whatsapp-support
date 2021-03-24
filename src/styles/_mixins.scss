@@ -1,0 +1,27 @@
+@mixin container-border {
+  border-right: 1px solid $color-medium-tint;
+}
+
+@mixin containerHeader {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: $secondary-font;
+}
+
+@mixin filterOptions {
+  padding: 0.4rem;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  &:hover {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+
+@mixin flexboxContainer($direction, $main-axis, $cross-axis) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+}

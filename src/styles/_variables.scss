@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+/* colors */
+
+$primary-color: rgb(51, 75, 250);
+$primary-color-shade: rgba(59, 130, 246, 0.5);
+$primary-color-tint: rgba(59, 130, 246, 0.5);
+
+$secondary-color: rgb(251, 201, 22);
+$secondary-color-tint : rgba(254,237,175,.5);
+
+$color-dark: rgb(34, 34, 34);
+
+$color-medium: rgb(115, 115, 118);
+$color-medium-shade: rgb(229, 233, 250);
+$color-medium-tint: rgba(0, 0, 0, 0.2);
+
+$color-light: rgb(255, 255, 255);
+$color-light-shade: rgb(232, 232, 232);
+
+/* fonts */
+
+$primary-font: -apple-system, "Roboto", sans-serif;
+$secondary-font: "Rubik";

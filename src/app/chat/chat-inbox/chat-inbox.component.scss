@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+
+.chat-inbox {
+  &__header {
+    padding: 1.2rem 2.4rem;
+    @include flexboxContainer(row, flex-start, center);
+    @include containerHeader;
+    &:hover {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+  &__header-dropdown {
+    padding-left: 0.8rem;
+    padding-bottom: 0.2rem;
+    font-size: 1rem;
+    align-self: flex-end;
+  }
+  &__filter {
+    padding: 0.8rem 2rem 0.8rem 2rem;
+    @include flexboxContainer(row, flex-start, center);
+    font-weight: 600;
+  }
+  &__filter-inbox {
+    @include filterOptions;
+  }
+  &__filter-inbox-icon {
+    padding-right: 0.4rem;
+    font-size: 1.1rem;
+  }
+  &__filter-space {
+    flex-grow: 1;
+  }
+  &__filter-options {
+    @include filterOptions;
+  }
+
+  &__list {
+  }
+  &__list-item {
+    background-color: $color-medium-shade;
+    padding: 0.8rem 2rem;
+    border-left: 2px solid $primary-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__list-item-details {
+    @include flexboxContainer(row, space-around, center);
+  }
+  &__list-item-name {
+    color: $primary-color;
+    font-weight: 600;
+  }
+  &__list-item-space {
+    flex-grow: 1;
+  }
+  &__list-item-date {
+    color: $color-medium;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  &__list-item-note {
+    margin-top: 0.4rem;
+    @include flexboxContainer(row, flex-start, center);
+  }
+  &__list-item-user-icon{
+    width : 18px;
+    height : 18px;
+    margin-right : 0.8rem;
+  }
+  &__list-item-current-user-icon{
+    width : 17px;
+    height : 17px;
+  }
+  &__list-item-note-bar {
+    width: 2px;
+    height: 1rem;
+    background-color: $secondary-color;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  &__list-item-note-space {
+    height: 1.4rem;
+  }
+  &__list-item-note-text {
+    font-size: 13px;
+  }
+}
